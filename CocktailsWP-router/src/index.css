@@ -1,0 +1,319 @@
+:root {
+  /* Primary Colors */
+  --clr-primary-1: hsl(162, 61%, 89%);
+  --clr-primary-2: hsl(162, 60%, 78%);
+  --clr-primary-3: hsl(162, 61%, 67%);
+  --clr-primary-4: hsl(162, 61%, 57%);
+  --clr-primary-5: hsl(162, 73%, 46%);
+  --clr-primary-6: #1aa179;
+  --clr-primary-7: #13795b;
+  --clr-primary-8: #0d503c;
+  --clr-primary-9: #06281e;
+  /* Secondary Colors */
+  --clr-grey-1: hsl(212, 33%, 89%);
+  --clr-grey-2: hsl(210, 31%, 80%);
+  --clr-grey-3: hsl(211, 27%, 70%);
+  --clr-grey-4: hsl(209, 23%, 60%);
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 28%, 39%);
+  --clr-grey-7: hsl(209, 34%, 30%);
+  --clr-grey-8: hsl(211, 39%, 23%);
+  --clr-grey-9: hsl(209, 61%, 16%);
+  /* Standard Colors */
+  --clr-white: #fff;
+  --clr-black: #222;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-blue-dark: hsl(236, 100%, 40%);
+  --clr-blue-light: hsl(241, 100%, 83%);
+  /*Base Color*/
+  --clr-base: var(--clr-black);
+  /* Fvte Color */
+  --clr-fvte: #49a6e9;
+  /* Shadows */
+  --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lifted: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --shadow-faint: 0 0 5px rgba(75, 75, 75, 0.07);
+  --text-shadow: 0 0px 5px rgb(35 6 255 / 50%);
+  /* Transition*/
+  --transition-funky: all 0.7s cubic-bezier(0.61, 4.38, 0, 0.95);
+  --transition-normal: all 0.7s ease-in-out;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+/* topmost html element of react render*/
+#root {
+  height: 100%;
+}
+/*---------------------------------- Basic template ends -------------------------------------------------------*/
+
+body {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  letter-spacing: 0.1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(170, 23, 23, 1) 59%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.Navbar-wrapper {
+  background-color: white;
+  width: 100%;
+  padding: 1rem 2rem 1rem 2rem;
+  box-shadow: var(--shadow-dark);
+}
+
+.Navbar {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.Navbar p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 3px rgb(140, 0, 255);
+}
+
+.Navbar span {
+  margin: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.InputField {
+  padding: 0rem;
+  height: 0rem;
+  overflow: hidden;
+  font-size: 1rem;
+  box-shadow: var(--shadow-lifted);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  transition: var(--transition-normal);
+}
+
+.InputField.show {
+  padding: 1.6rem;
+  height: 8rem;
+}
+
+.InputField > label {
+  color: red;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: smaller;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.InputField > input {
+  font-size: 1.5rem;
+  padding: 0.1rem 0.5rem;
+  border-color: var(--clr-fvte);
+}
+
+.Cocktails-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.Cocktails-wrapper > h1 {
+  font-family: cursive;
+  text-shadow: var(--text-shadow);
+  margin-bottom: 1rem;
+}
+
+.Cocktails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.CocktailCard {
+  width: 25%;
+  text-align: left;
+  background-color: white;
+  margin: 0.5rem;
+  box-shadow: var(--shadow-lifted);
+}
+
+.CocktailCard img {
+  width: 100%;
+}
+
+.CocktailCard p,
+h2,
+h3,
+a {
+  margin-left: 1rem;
+}
+
+.CocktailCard p {
+  background-color: var(--clr-grey-8);
+  color: white;
+  width: fit-content;
+  padding: 0.1rem;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  margin-top: 0.7rem;
+  padding: 0.2rem;
+}
+
+.CocktailCard a {
+  background-color: var(--clr-fvte);
+  color: white;
+  width: fit-content;
+  padding: 0.1rem;
+  font-weight: bold;
+  display: block;
+  border-radius: 0.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+  transition: background-color 0.5s;
+}
+
+.CocktailCard a:hover {
+  background-color: red;
+}
+
+@media screen and (max-width: 1200px) {
+  .CocktailCard {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .CocktailCard {
+    width: 80%;
+  }
+}
+
+.CocktailPage {
+  background-color: white;
+  color: black;
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.CocktailPage img {
+  width: 40%;
+}
+
+@media screen and (max-width: 600px) {
+  .CocktailPage img {
+    width: 100%;
+  }
+  .CocktailPage {
+    flex-direction: column;
+  }
+}
+
+.cocktail-info {
+  padding: 1rem;
+}
+.cocktail-info > div {
+  margin-bottom: 1rem;
+}
+.cocktail-info > div span {
+  font-weight: 700;
+}
+
+.cocktail-info > div span:first-child {
+  background-color: lightgreen;
+  color: white;
+  border-radius: 0.1rem;
+  padding: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.AboutPage {
+  background-color: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  font-family: cursive;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.AboutPage h1 {
+  margin-top: 3rem;
+}
+
+.AboutPage > div {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.single-text {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 3rem;
+  color: white;
+}
+
+.ErrorPage a {
+  background-color: blue;
+  color: yellow;
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
